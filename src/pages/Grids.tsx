@@ -1,8 +1,6 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { useGrids, GearType, toFixedString } from '../hooks/useGrids';
 import styled from 'styled-components';
-
-const LazyDownload = lazy(() => import('./Download'));
 
 const Container = styled.div`
   width: 100%;
@@ -84,9 +82,6 @@ export function Grids() {
     <Container>
       <Title>
         <span>操作示意表</span>
-        <Suspense fallback={null}>
-          <LazyDownload />
-        </Suspense>
       </Title>
       <Table id="table-list">
         <thead>
